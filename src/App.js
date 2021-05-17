@@ -1,7 +1,10 @@
 import React from "react";
 import "./style.css";
+import Nombres from './Nombres'
 
 export default function App() {
+
+  const operadorTernario = 'operador ternario'
 
   function SaludarEnIdiomas ({idioma}){
     if(idioma === 'es') return <span>Hola</span>
@@ -33,6 +36,10 @@ export default function App() {
   return (
     <div>
       <Saludar />
+      {
+        operadorTernario === 'operador ternario' ? <p>Operador Ternario</p> : <p>Expresion Negada Operador Ternario </p>
+      }
+      <Nombres />
     </div>
   );
 }
